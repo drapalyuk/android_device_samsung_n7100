@@ -38,6 +38,9 @@ on init
 on fs
     mount_all /fstab.smdk4x12
 
+# ko files for wlan
+    insmod /system/lib/modules/dhd.ko firmware_path=/system/etc/wifi/bcmdhd_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt
+
     setprop ro.crypto.fuse_sdcard true
     
     chown radio system /efs
